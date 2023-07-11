@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高雄旅遊景點</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    .img-cover {
+      object-fit: cover;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h1 class="text-center m-4">高雄旅遊景點</h1>
+      <div class="row" id="content">
+        <card :point="displayData"></card>
+      </div>
+      <div class="d-flex justify-content-center mt-4">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination" id="pageid">
+            <page-btn :current-page="currentPage" :page-total="pageTotal" :has-page="hasPage" :has-next="hasNext" @switch-page="changePage"></page-btn>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.prod.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.6/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="all.js"></script>
+</body>
+</html>
